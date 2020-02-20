@@ -1,20 +1,16 @@
+const express = require('express');
 var router = express.Router();
-import * as authController from './controllers/auth';
+var authController = require('./controllers/auth');
 
-// import {
-    
-//     validateLoginEmail,
-//     validatePassword,
-    
-//   } from '../middleware/validation-middleware';
+const middleware = require('./middleware/validation-middleware');
+// const validatePassword = require('./middleware/validation-middleware');
 
 
 
   router.post(
     '/login',
-    // [validateLoginEmail, validatePassword],
-    authController.login,
-    // authController.loginSuccess
+     [middleware.validateLoginEmail,middleware.validatePassword],
+    authController.login
   );
 
-export default router;
+  module.exports = router;

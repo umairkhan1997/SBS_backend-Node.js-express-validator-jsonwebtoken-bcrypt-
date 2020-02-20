@@ -1,8 +1,10 @@
-import { body } from 'express-validator';
+const expressvalidator = require('express-validator');
 
 
 
-export const validateLoginEmail = body(
+
+
+ const validateLoginEmail = expressvalidator.body(
     'email',
     'Please enter a valid e-mail address.'
   )
@@ -10,7 +12,7 @@ export const validateLoginEmail = body(
     .normalizeEmail();
 
 
-export const validatePassword = body(
+ const validatePassword = expressvalidator.body(
     'password',
     'Please enter a alphanumeric password and at least 6 characters long.'
     )
@@ -19,3 +21,4 @@ export const validatePassword = body(
     .trim();
 
 
+    module.exports = {validateLoginEmail,validatePassword}
