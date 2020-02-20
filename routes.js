@@ -16,3 +16,5 @@ import {
     authController.login,
     authController.loginSuccess
   );
+
+  export default router;
