@@ -3,7 +3,7 @@ var connection = mysql.createConnection({
     host     : '127.0.0.1',
     user     : 'root',
     password : 'password@123',
-    database : 'Sbs-schema'
+    database : 'sbs_server'
 });
 
 connection.connect(function(err) {

@@ -1,18 +1,20 @@
 var router = express.Router();
 import * as authController from './controllers/auth';
 
-import {
+// import {
     
-    validateLoginEmail,
-    validatePassword,
+//     validateLoginEmail,
+//     validatePassword,
     
-  } from '../middleware/validation-middleware';
+//   } from '../middleware/validation-middleware';
 
 
 
   router.post(
     '/login',
-    [validateLoginEmail, validatePassword],
+    // [validateLoginEmail, validatePassword],
     authController.login,
-    authController.loginSuccess
+    // authController.loginSuccess
   );
+
+export default router;
