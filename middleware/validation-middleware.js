@@ -1,16 +1,32 @@
 const expressvalidator = require('express-validator');
 
 
-
-
-
  const validateLoginEmail = expressvalidator.body(
     'email',
     'Please enter a valid e-mail address.'
   )
     .isEmail()
-    .normalizeEmail();
+    .normalizeEmail()
+   .notEmpty()
 
+   const validateprofile_pic_url = expressvalidator.body(
+      'profile_pic_url',
+      'Please select a Profile Image.'
+    )
+     .notEmpty()
+
+     const validatename = expressvalidator.body(
+      'name',
+      'Please enter a Name .'
+    )
+     .notEmpty()
+
+     const validatecontact_no = expressvalidator.body(
+      'contact_no',
+      'Please enter a Contact Number .'
+    )
+     .notEmpty()
+  
 
  const validatePassword = expressvalidator.body(
     'password',
@@ -21,4 +37,7 @@ const expressvalidator = require('express-validator');
     .trim();
 
 
-    module.exports = {validateLoginEmail,validatePassword}
+
+    
+    
+         module.exports = {validateLoginEmail,validatePassword,validateprofile_pic_url,validatename,validatecontact_no}
