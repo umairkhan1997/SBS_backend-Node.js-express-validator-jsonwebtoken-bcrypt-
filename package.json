@@ -33,7 +33,7 @@
     "firebase": "^7.9.3",
     "fs": "0.0.1-security",
     "html-pdf": "^2.2.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "multer": "^1.4.2",
     "mysql": "^2.18.1",
     "passport": "^0.4.1",
